@@ -1,0 +1,56 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+	<style>
+		.range {
+			background-color: orange;
+			position: absolute;
+			left: calc((var(--birth)-1600)*0.1px);
+			right: calc((var(--death)-1600)*0.1px);
+			bottom: calc(var(--y)*40px);
+			top: calc((var(--y)+1)*40px);
+			height: 40px;
+			width: calc((var(--death)-var(--birth))*0.1px);
+			color: #fff;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 40px;
+		}
+
+		.range>* {
+			padding: 2px;
+		}
+		.death{
+			display: flex;
+			justify-content: right;
+			align-items: flex-end;
+		}
+		.birth{
+			text-align: right;
+			display: flex;
+			justify-content: left;
+			align-items: flex-end;
+		}
+		.name{
+			display: flex;
+			align-items:center;
+			justify-content:center;
+		}
+	</style>
+	<div class="range" style="--birth:1800;--death:1890;--y:1">
+		<div class="birth">1800</div>
+		<div class="name"><p>Artist1</p></div>
+		<div class="death">1890</div>
+	</div>
+	<div class="range" style="--birth:1690;--death:1760;--y:2">
+		<div class="birth">1690</div>
+		<div class="name"><p>Artist2</p></div>
+		<div class="death">1760</div>
+	</div>
+</body>
+
+</html>
